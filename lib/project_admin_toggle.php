@@ -5,7 +5,7 @@ function get_admin_toggle($userGuid){
   $return = array();
 
   $isAdmin = (get_entity($userGuid)->project_admin == '1');
-  $content = var_dump($isAdmin);
+  
   $vars = array('userGuid'=>$userGuid);
   if($isAdmin){
     $title = "You are a Project Admin";
