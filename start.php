@@ -40,7 +40,7 @@ function project_admin_toggle_page_handler($page)
 
     switch ($pageNav) {
         case "toggle":
-                $current_user_guid = elgg_get_logged_in_user_guid()
+                $current_user_guid = elgg_get_logged_in_user_guid();
                 //call get_dashboard_view in our library
                 $params = get_admin_toggle($current_user_guid);
                 //one_sidebar, content, admin
