@@ -11,7 +11,7 @@ function get_admin_toggle($userGuid){
   $content .= elgg_view_form('project_admin_toggle/removeProjectAdmin', array(), $vars);
 
 
-  $title = "Toggle Project Admin"
+  $title = "Toggle Project Admin";
 
 
   elgg_push_breadcrumb($title);
