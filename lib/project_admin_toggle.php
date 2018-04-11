@@ -7,13 +7,13 @@ function get_admin_toggle($userGuid){
   $isAdmin = (get_entity($userGuid)->project_admin == '1');
   $content = var_dump($isAdmin);
   $vars = array('userGuid'=>$userGuid);
-  $content .= elgg_view_form('project_admin_toggle/addProjectAdmin', array(), $vars);
-  $content .= elgg_view_form('project_admin_toggle/removeProjectAdmin', array(), $vars);
-
-
-  $title = "Toggle Project Admin";
-
-
+  if($isAdmin){
+    $title = "You are a Project Admin";
+    $content .= elgg_view_form('project_admin_toggle/removeProjectAdmin', array(), $vars);
+  }else{
+    $title = "You are NOT a Project Admin";
+    $content .= elgg_view_form('project_admin_toggle/addProjectAdmin', array(), $vars);
+  }
   elgg_push_breadcrumb($title);
 
   $return['content'] = $content;

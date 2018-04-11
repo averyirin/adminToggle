@@ -6,12 +6,12 @@
     <div>
         <?php
 
-        echo elgg_view('input/text', array(
+        echo elgg_view('input/hidden', array(
             'name' => 'userGuid',
             'value' => $vars['userGuid'],
         ));
 
-        echo elgg_view('input/submit', array('name' => 'submit', 'value' => elgg_echo('submit')));
+        echo elgg_view('input/submit', array('name' => 'submit', 'value' => 'Remove me as Project Admin'));
         ?>
     </div>
 </div>
